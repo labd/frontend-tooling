@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-labd",
+  "version": "0.1.0",
+  "description": "Shareable ESLint config for Lab Digital applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/labd/eslint-config-labd"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "eslint": "6.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "2.x"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "lab",
+    "digital",
+    "labd"
+  ],
+  "author": "Boris Besemer <b.besemer@labdigital.nl>",
+  "license": "MIT"
+}
