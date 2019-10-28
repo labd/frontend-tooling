@@ -4,15 +4,6 @@ module.exports = {
   root: true,
   // We default to the typescript parser
   parser: '@typescript-eslint/parser',
-  extends: ['plugin:prettier/recommended', 'plugin:react/recommended', 'plugins: '],
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
-  env: {
-    browser: true,
-    commonjs: true,
-    es6: true,
-    jest: true,
-    node: true,
-  },
   parserOptions: {
     project: path.resolve('tsconfig.json'),
     ecmaVersion: 11,
@@ -22,22 +13,39 @@ module.exports = {
     },
     warnOnUnsupportedTypeScriptVersion: true,
   },
+  extends: [
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+  ],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    jest: true,
+    node: true,
+  },
+
   settings: {
     react: {
-        version: 'detect'
+      version: 'detect',
     },
     'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx']
-    }
-  }
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        directory: './tsconfig.json',
+      },
+    },
+  },
   rules: {
-    'import/named': 1,
-    'import/order': [
-        'error',
-        [
-            'newlines-between': 'always'
-            groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']]
-        ]
-    ]
-  }
+    'import/default': 0,
+    'import/named': 'warn',
+    'react/require-render-return': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+  },
 }

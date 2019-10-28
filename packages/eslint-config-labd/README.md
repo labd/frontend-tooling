@@ -11,3 +11,10 @@ sort imports.
 
 Next to that there are no strict limitations on code style, but it is strict on problematic code,
 like badly set-up hooks.
+
+## Installation instructions
+
+Use the following command to install this config and it's peer dependencies:
+```sh
+yarn add -D eslint-config-labd eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
+```
