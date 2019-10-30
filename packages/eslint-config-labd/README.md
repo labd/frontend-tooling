@@ -16,5 +16,16 @@ like badly set-up hooks.
 
 Use the following command to install this config and it's peer dependencies:
 ```sh
-yarn add -D eslint-config-labd eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks
+yarn add -D eslint-config-labd eslint
+```
+
+Add the config to your `.eslintrc.js`:
+
+```js
+module.exports = {
+    root: true,
+    extends: [
+        '@labd/eslint-config'
+    ],
+}
 ```

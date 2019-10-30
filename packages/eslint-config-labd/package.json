@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-labd",
+  "name": "@labd/eslint-config",
   "version": "0.1.0",
   "description": "Shareable ESLint config for Lab Digital applications",
   "main": "index.js",
@@ -11,14 +11,17 @@
     "url": "github.com/labd/eslint-config-labd"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "2.x",
-    "@typescript-eslint/parser": "2.x",
-    "eslint": "6.x",
-    "eslint-import-resolver-typescript": "2.x",
-    "eslint-plugin-import": "2.x",
-    "eslint-plugin-prettier": "3.x",
-    "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "2.x"
+    "eslint": "6.x"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "2.6.0",
+    "@typescript-eslint/parser": "2.6.0",
+    "babel-eslint": "10.0.3",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-react": "7.16.0",
+    "eslint-plugin-react-hooks": "2.2.0"
   },
   "keywords": [
     "eslint",

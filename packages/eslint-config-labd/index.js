@@ -1,26 +1,9 @@
 const path = require('path')
 
 module.exports = {
-  root: true,
-  // We default to the typescript parser
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: path.resolve('tsconfig.json'),
-    ecmaVersion: 11,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-    warnOnUnsupportedTypeScriptVersion: true,
-  },
-  extends: [
-    'plugin:prettier/recommended',
-    'plugin:react/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-  ],
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'prettier'],
+  parser: 'babel-eslint',
+  plugins: ['react', 'react-hooks', 'prettier'],
+
   env: {
     browser: true,
     commonjs: true,
@@ -28,6 +11,42 @@ module.exports = {
     jest: true,
     node: true,
   },
+
+  parserOptions: {
+    ecmaVersion: 11,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+
+  extends: [
+    'plugin:prettier/recommended',
+    'plugin:react/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+  ],
+
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: path.resolve('tsconfig.json'),
+        ecmaVersion: 11,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/no-namespace': 'error',
+      },
+    },
+  ],
 
   settings: {
     react: {
