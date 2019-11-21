@@ -1,7 +1,7 @@
 {
   "name": "@labd/eslint-config",
   "version": "0.1.0",
-  "description": "Shareable ESLint config for Lab Digital applications",
+  "description": "Base ESLint config for Lab Digital applications",
   "main": "index.js",
   "repository": {
     "type": "git",
