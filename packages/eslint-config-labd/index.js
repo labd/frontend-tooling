@@ -60,9 +60,10 @@ module.exports = {
     },
   },
   rules: {
-    'import/default': 0,
+    'import/default': 'off',
     'import/named': 'warn',
     'react/require-render-return': 'error',
+    'react/prop-types': 'off'  // No need for prop type validation with TypeScript
     'react-hooks/rules-of-hooks': 'error',
     'import/order': [
       'error',
