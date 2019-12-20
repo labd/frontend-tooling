@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   parser: 'babel-eslint',
-  plugins: ['react', 'react-hooks', 'prettier'],
+  plugins: ['react', 'react-hooks', 'prettier', 'order'],
 
   env: {
     browser: true,
@@ -56,9 +56,7 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
-      typescript: {
-        directory: './tsconfig.json',
-      },
+      typescript: {},
     },
   },
   rules: {
@@ -66,5 +64,18 @@ module.exports = {
     'import/named': 'warn',
     'react/require-render-return': 'error',
     'react-hooks/rules-of-hooks': 'error',
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'never',
+        groups: ['builtin', 'external', 'internal', 'sibling', 'index'],
+        pathGroups: [
+          {
+            pattern: '~/**',
+            group: 'internal',
+          },
+        ],
+      },
+    ],
   },
 }
