@@ -44,6 +44,41 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       rules: {
         '@typescript-eslint/no-namespace': 'error',
+        'default-case': 'off',
+        'no-dupe-class-members': 'off',
+        'no-undef': 'off',
+        '@typescript-eslint/consistent-type-assertions': 'warn',
+        'no-array-constructor': 'off',
+        '@typescript-eslint/no-array-constructor': 'warn',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': [
+          'warn',
+          {
+            functions: false,
+            classes: false,
+            variables: false,
+            typedefs: false,
+          },
+        ],
+        'no-unused-expressions': 'off',
+        '@typescript-eslint/no-unused-expressions': [
+          'error',
+          {
+            allowShortCircuit: true,
+            allowTernary: true,
+            allowTaggedTemplates: true,
+          },
+        ],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            args: 'none',
+            ignoreRestSiblings: true,
+          },
+        ],
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'warn',
       },
     },
   ],
