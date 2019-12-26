@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   parser: 'babel-eslint',
-  plugins: ['react', 'react-hooks', 'prettier', 'order'],
+  plugins: ['react', 'react-hooks', 'import'],
 
   env: {
     browser: true,
@@ -21,11 +21,13 @@ module.exports = {
   },
 
   extends: [
-    'plugin:prettier/recommended',
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
   ],
 
   overrides: [
@@ -98,7 +100,7 @@ module.exports = {
     'import/default': 'off',
     'import/named': 'warn',
     'react/require-render-return': 'error',
-    'react/prop-types': 'off'  // No need for prop type validation with TypeScript
+    'react/prop-types': 'off', // No need for prop type validation with TypeScript
     'react-hooks/rules-of-hooks': 'error',
     'import/order': [
       'error',
