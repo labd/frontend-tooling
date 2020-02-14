@@ -27,12 +27,8 @@ module.exports = () => {
   ]
 
   const plugins = [
-    // Proposal plugins
     resolve('@babel/plugin-proposal-class-properties'),
     resolve('@babel/plugin-proposal-object-rest-spread'),
-    resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
-    resolve('@babel/plugin-proposal-optional-chaining'),
-    resolve('@babel/plugin-syntax-dynamic-import'),
     // Transform runtime
     [
       resolve('@babel/plugin-transform-runtime'),
