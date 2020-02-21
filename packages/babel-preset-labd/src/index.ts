@@ -20,7 +20,7 @@ module.exports = () => {
       resolve('@babel/preset-react'),
       {
         useBuiltIns: true,
-        development: __DEV__,
+        development: process.env.NODE_ENV === 'development',
       },
     ],
     resolve('@babel/preset-typescript'),

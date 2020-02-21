@@ -8,21 +8,21 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.8.4",
-    "@babel/plugin-proposal-class-properties": "7.8.4",
-    "@babel/plugin-proposal-object-rest-spread": "7.8.4",
-    "@babel/plugin-transform-runtime": "7.8.4",
-    "@babel/preset-env": "7.8.4",
-    "@babel/preset-react": "7.8.4",
-    "@babel/preset-typescript": "7.8.4",
-    "@babel/runtime": "7.8.4"
+    "@babel/core": "7.8.3",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.8.3",
+    "@babel/preset-env": "7.8.3",
+    "@babel/preset-react": "7.8.3",
+    "@babel/preset-typescript": "7.8.3",
+    "@babel/runtime": "7.8.3"
   },
   "devDependencies": {
-    "@babel/cli": "7.8.4",
+    "@babel/cli": "7.8.3",
     "core-js": "3.6.4"
   },
   "peerDependencies": {
-    "@babel/core": "7.8.4"
+    "@babel/core": "7.8.3"
   },
   "scripts": {
     "build": "babel src --out-dir . --extensions '.ts' --ignore '**/*.d.ts'"
