@@ -26,7 +26,6 @@ module.exports = () => {
       : [
           resolve('@babel/preset-env'),
           {
-            loose: true,
             modules: false,
             corejs: 3,
             useBuiltIns: 'usage',
