@@ -1,41 +1,60 @@
 const path = require('path')
+import { isDevelopment, isTest, isProduction, env } from './environment'
 
 const resolve = (module: string) => require.resolve(module)
+
+if (!isDevelopment && !isTest && !isProduction) {
+  throw new Error(
+    `NODE_ENV or BABEL_ENV not set properly, this needs to be either 'development', 'test' or 'production, received ${env}`
+  )
+}
 
 module.exports = () => {
   const absoluteRuntimePath = path.dirname(resolve('@babel/runtime/package.json'))
 
   const presets = [
-    [
-      resolve('@babel/preset-env'),
-      {
-        loose: true,
-        modules: 'commonjs',
-        corejs: 3,
-        useBuiltIns: 'usage',
-        exclude: ['transform-typeof-symbol'],
-      },
-    ],
+    isTest
+      ? [
+          // Compile against current node when running tests
+          resolve('@babel/preset-env'),
+          {
+            targets: {
+              node: 'current',
+            },
+          },
+        ]
+      : [
+          resolve('@babel/preset-env'),
+          {
+            loose: true,
+            modules: false,
+            corejs: 3,
+            useBuiltIns: 'usage',
+            // This is a heavy transform, exclude it to increase buildtimes
+            exclude: ['transform-typeof-symbol'],
+          },
+        ],
     [
       resolve('@babel/preset-react'),
       {
         useBuiltIns: true,
-        development: process.env.NODE_ENV === 'development',
+        development: isDevelopment || isTest,
       },
     ],
     resolve('@babel/preset-typescript'),
-  ]
+  ].filter(Boolean)
 
   const plugins = [
     resolve('@babel/plugin-proposal-class-properties'),
     resolve('@babel/plugin-proposal-object-rest-spread'),
-    // Transform runtime
     [
       resolve('@babel/plugin-transform-runtime'),
       {
         corejs: false,
         regenerator: true,
-        absoluteRuntimePath,
+        // Enable this once Node LTS supports ES Modules (most likely Node 14, since 13 supports it.)
+        useESModules: false,
+        absoluteRuntime: absoluteRuntimePath,
       },
     ],
   ]
