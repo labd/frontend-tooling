@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "repository": {
+    "type": "git",
+    "url": "github.com/labd/frontend-tooling"
+  },
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  },
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean --yes"
+  },
+  "author": "Boris Besemer <b.besemer@labdigital.nl>"
+}
