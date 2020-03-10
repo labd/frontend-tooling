@@ -3,10 +3,6 @@
   "version": "0.2.1",
   "description": "Base ESLint config for Lab Digital applications",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "github.com/labd/eslint-config-labd"
-  },
   "peerDependencies": {
     "eslint": "6.x"
   },

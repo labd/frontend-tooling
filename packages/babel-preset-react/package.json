@@ -3,10 +3,8 @@
   "version": "0.1.0",
   "description": "Babel preset for LabD projects using React",
   "main": "index.js",
-  "repository": "git://git.labdigital.nl/boris/babel-config-labd.git",
   "author": "Boris Besemer <b.besemer@labdigital.nl>",
-  "license": "UNLICENSED",
-  "private": true,
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "7.8.3",
     "@babel/plugin-proposal-class-properties": "7.8.3",
