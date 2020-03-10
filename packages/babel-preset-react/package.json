@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Boris Besemer <b.besemer@labdigital.nl>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@babel/core": "7.8.3",
     "@babel/plugin-proposal-class-properties": "7.8.3",
@@ -27,5 +30,5 @@
     "build": "babel src --out-dir . --extensions '.ts' --ignore '**/*.d.ts'",
     "prepublish": "yarn run build"
   },
-  "gitHead": "c4e5fcfb67dc4ada7f57d6e135d1eaad2419f852"
+  "gitHead": "cff06497e77cd81faa1999096b225bc9750fd543"
 }
