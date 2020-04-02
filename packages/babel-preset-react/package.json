@@ -1,6 +1,6 @@
 {
   "name": "@labd/babel-preset-react",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Babel preset for LabD projects using React",
   "main": "index.js",
   "author": "Boris Besemer <b.besemer@labdigital.nl>",
