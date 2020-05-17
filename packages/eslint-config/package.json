@@ -10,14 +10,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "2.12.0",
-    "@typescript-eslint/parser": "2.12.0",
-    "babel-eslint": "10.0.3",
-    "eslint-config-prettier": "6.7.0",
+    "@typescript-eslint/eslint-plugin": "2.33.0",
+    "@typescript-eslint/parser": "2.33.0",
+    "babel-eslint": "10.1.0",
+    "eslint-config-prettier": "6.11.0",
     "eslint-import-resolver-typescript": "2.0.0",
-    "eslint-plugin-import": "2.19.1",
-    "eslint-plugin-react": "7.17.0",
-    "eslint-plugin-react-hooks": "2.3.0"
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.2"
   },
   "keywords": [
     "eslint",
