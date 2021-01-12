@@ -21,15 +21,18 @@ module.exports = () => {
             targets: {
               node: 'current',
             },
+            modules: false,
+            // This is a heavy transform, exclude it to decrease build times
+            exclude: ['transform-typeof-symbol'],
           },
         ]
       : [
           resolve('@babel/preset-env'),
           {
+            useBuiltIns: 'entry',
             modules: false,
             corejs: 3,
-            useBuiltIns: 'usage',
-            // This is a heavy transform, exclude it to increase buildtimes
+            // This is a heavy transform, exclude it to decrease build times
             exclude: ['transform-typeof-symbol'],
           },
         ],
