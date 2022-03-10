@@ -10,14 +10,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "4.9.1",
-    "@typescript-eslint/parser": "4.9.1",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
     "babel-eslint": "10.1.0",
-    "eslint-config-prettier": "7.0.0",
-    "eslint-import-resolver-typescript": "2.3.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-react": "7.21.5",
-    "eslint-plugin-react-hooks": "4.2.0"
+    "eslint-config-prettier": "8.5.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react-hooks": "4.3.0"
   },
   "keywords": [
     "eslint",
@@ -28,5 +28,8 @@
   ],
   "author": "Boris Besemer <b.besemer@labdigital.nl>",
   "license": "MIT",
-  "gitHead": "cff06497e77cd81faa1999096b225bc9750fd543"
+  "gitHead": "cff06497e77cd81faa1999096b225bc9750fd543",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
 }
