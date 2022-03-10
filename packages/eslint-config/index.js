@@ -26,8 +26,6 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
   ],
 
   overrides: [
