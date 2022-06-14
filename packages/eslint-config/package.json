@@ -1,6 +1,6 @@
 {
   "name": "@labd/eslint-config",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Base ESLint config for Lab Digital applications",
   "main": "index.js",
   "peerDependencies": {
